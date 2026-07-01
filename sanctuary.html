@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>curse</title>
+    <link rel="icon" href="https://i.postimg.cc/6QDRmw7s/mo33.gif">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <style>
+        @font-face {
+            font-family: bios;
+            src: url(fonts/Nintendo-DS-BIOS.ttf);
+        }
+
+        @font-face {
+            font-family: deltarune;
+            src: url(undertale-deltarune-text-font-extended.ttf);
+        }
+
+        @keyframes squiggly-anim {
+            0% {
+                -webkit-filter: url("#squiggly-0");
+                filter: url("#squiggly-0");
+            }
+
+            25% {
+                -webkit-filter: url("#squiggly-1");
+                filter: url("#squiggly-1");
+            }
+
+            50% {
+                -webkit-filter: url("#squiggly-2");
+                filter: url("#squiggly-2");
+            }
+
+            75% {
+                -webkit-filter: url("#squiggly-3");
+                filter: url("#squiggly-3");
+            }
+
+            100% {
+                -webkit-filter: url("#squiggly-4");
+                filter: url("#squiggly-4");
+            }
+        }
+
+        #scribble {
+            animation: squiggly-anim 0.5s linear infinite;
+        }
+
+
+        ::selection {
+            background: rgb(15, 15, 111);
+            color: white;
+        }
+
+        body {
+            font-size: 15px;
+            font-family: deltarune;
+            letter-spacing: -0.7px;
+            background-color: #000000;
+            background-image: url('prophecy.png');
+            background-color: #1c2e4f;
+    background-blend-mode: multiply; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+            line-height: 29px;
+        }
+
+        pre {
+            font-size: 15px;
+            font-family: dotgothic16;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        div {
+            width: fit-content;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #huh {
+            color: white;
+        }
+
+        #ah {
+            margin-top: -0px;
+            width: 740px;
+            color: white;
+        }
+
+        #ha {
+            margin-top: -0px;
+            width: 950px;
+            text-align: center;
+            color: white;
+        }
+
+        #icons {
+            margin-top: 25px;
+            margin-left: 230px;
+            position: absolute;
+            text-align: center;
+            align-items: center;
+        }
+
+        #icons img {
+            width: 100px;
+        }
+
+        a {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 2px;
+            color: rgb(67, 190, 223);
+            text-decoration-color: rgb(154, 154, 155);
+            transition: ease-in-out 0.5s;
+        }
+
+        b {
+            color: rgb(220, 236, 255);
+            text-shadow:
+                -3px -3px 0 blue,
+                3px -3px 0 blue,
+                -3px 3px 0 blue,
+                3px 3px 0 blue,
+                -3px 0 0 blue,
+                2px 0 0 blue,
+                0 -2px 0 blue,
+                0 2px 0 blue;
+        }
+
+        u {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            color: rgb(81, 120, 238);
+            text-decoration-color: rgb(255, 255, 255);
+        }
+
+        a:hover {
+            background: rgb(40, 40, 193);
+            padding-left: 5px;
+            padding-right: 5px; 
+            text-decoration-line: none;
+            color: white;
+            transition: ease-in-out 0.5s;
+        }
+
+        #fronters {
+            position: absolute;
+            margin-top: -4px;
+            margin-left: 222px;
+            z-index: 99;
+        }
+
+        #dialogue {
+            position: absolute;
+            pointer-events: none;
+            z-index: -52;
+            margin-top: 400px;
+            margin-left: -250px;
+        }
+
+        #dialogue img {
+            width: 810px;
+        }
+
+        #frontnotif {
+            position: absolute;
+            margin-left: 190px;
+            margin-top: 12px;
+        }
+
+        #float {
+            animation-name: floating;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translate(0, 0px);
+            }
+
+            50% {
+                transform: translate(0, 15px);
+            }
+
+            100% {
+                transform: translate(0, -0px);
+            }
+        }
+
+
+
+        @media screen and (max-width: 650px) {
+
+            body {
+                transform: scale(0.5);
+                overflow-x: hidden;
+            }
+
+            #dialogue {
+                margin-left: -70px;
+                margin-top: 415px;
+            }
+
+            #dialogue img {
+                width: 720px;
+            }
+
+            #kris {
+                margin-left: -80px;
+                line-height: 17px !important;
+            } 
+
+            #kris2 {
+                margin-left: -20px;
+            }
+
+            #huh {
+                margin-top: -43%;
+                margin-left: -12%;
+            }
+
+            #ah {
+                width: 580px;
+                margin-left: -12%;
+            }
+
+            #icons {
+                width: 590px;
+                position: absolute;
+                margin-left: -120px;
+            }
+
+            #names {
+                margin-left: -290px !important; 
+            }
+
+            #ha {
+                margin-left: -32%;
+            }
+
+            #fronters {
+                margin-left: -2%
+            }
+
+            #frontnotif {
+                margin-left: -1%;
+            }
+        }
+    </style>
+</head>
+
+<span class="svg-container">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
+        <defs>
+            <filter id="squiggly-0">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+                <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+            </filter>
+            <filter id="squiggly-1">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+            </filter>
+            <filter id="squiggly-2">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+            </filter>
+            <filter id="squiggly-3">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+            </filter>
+            <filter id="squiggly-4">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+            </filter>
+        </defs>
+    </svg>
+</span>
+
+<body>
+
+    <div>
+
+
+        <div id="huh">
+
+            <div id="dialogue">
+                <img src="box.png">
+            </div>
+            <center>
+                <img src="newrune.gif" width="230px" style="justify-content: center; float:; ">
+            </center>
+            <b>DARK SANCTUARY</b> or JIRACHI. <span id="scribble">19</span>. <u>IT/THEY</u>
+            <br>
+            <font size="2px" color="gray">* The prophecy may be unstable on</font>
+            <font size="2px" color="lightgray">MOBILE.</font>
+            <br>
+            <audio controls>
+                <source src="neverending.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+        </div>
+        <div id="ah">
+            <br> <br> <br>
+            <img src="kris4.webp" style="float:left;" width="140" id="kris2">
+            <p style="width:690px; font-size: 16px; line-height: 24px; text-align: left; margin-top: 12px;" id="kris">
+                <b>*</b> ... hi! to
+                put it
+                short, this is a site special to our
+                <Span id="scribble"><u>DID</u></Span>
+                for a short intro on how it affects <i>me</i>.<font color=lightblue size="2px">[1]</font>
+                <br> <br>
+                <font color=lightblue size="2px">[1] </font>
+                <font size="2px" color=gray>required "this disorder is very different for everyone because it is a <font
+                        color="lightgray">trauma</font>
+                    disorder and please do not base the identity of your trauma off of mine" disclaimer because it's
+                    happened before </font>
+            </p>
+            <br> <br>
+            <b>[...?]</b> we have a lot of varying mental disorders <u> -</u> all of which play into our behavior in
+            some way. it makes us prone to episodes of strong irritation, exhaustion, or isolation - putting it lightly;
+            meaning it's hard to consistently
+            contact us a lot of the time
+            <font size="2px" color=#4365ae>if you're so inclined to know, yes, we have been in active professional
+                treatment. yes, they have talked to our introjects. </font>
+            <br>
+            <br> we're relatively closed off about specfics of our own disorder<font color="lightblue">(s)</font>
+            outside of certain tidbits or if it comes up in conversation. <font size="2px" color="lightgray">we do,
+                however, have very strong opinions about a lot of
+                system-oriented topics and love to discuss them.</font>
+            <br> <br> our frequent fronters shift easily - meaning a lot of our
+            communication is limited. <font color="lightblue" size=2px>you'll mainly see <b>siffrin / kris</b> out and
+                about! </font>
+            <br> <br> <b>c</b>ollectively, we ⠀<span id="scribble"><img src="soul2.png" width=15 alt="heart"></span>⠀
+            <b> the boys</b>, deltarune, undertale, girls last tour, <u>jack quaid</u>, severance, <i>revue
+                starlight</i>, <b>alan
+                wake</b>, and persona <u>3</u>.
+            <br>
+            <br> there are quite a few of us, but only a handful <font size="2px" color=lightblue>(those below)</font>
+            are fully formed and have public profiles that we're okay with sharing.
+            <br>
+            <font size=2px color="lightblue ">the rest you'll have to find scattered about like slenderman's pages.
+                collect my alters. </font>
+            <br> <br>
+        </div>
+
+        <div id="icons"><img src="alter/asya.png" span id="float"> <img src="alter/hughie.png" span id="float"><img src="alter/simon.png" span id="float">
+        </div>
+        <br> <br> <br> <br>
+        <div id="float">
+            <p style="margin-left: -20px" id="names">
+                　　　　<a href="https://jellyfish.garden/fish">asya</a>
+                　　　　<a href="https://hughie.jellyfish.garden">hughie</a>
+                　　　　<a href="https://jellyfish.garden/simon">simon</a>
+            </p>
+        </div>
+
+        <br> <br>
+</body>
+
+</html>
